@@ -1,0 +1,633 @@
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+html{
+    scroll-behavior: smooth;
+  }
+  .center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+  }
+  
+  .body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .nav_link {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .link_title {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .link_title:hover {
+    text-decoration: underline;
+  }
+  .top-cart{
+    height: 400px;
+    position: relative;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-bottom: 0.5px solid #FFF;
+    padding-bottom: 18.5px;
+    stroke-width: 0.5px;
+    stroke: rgba(255, 255, 255, 0.8);
+    flex-wrap: wrap;
+  }
+  
+  .header_all {
+    position: relative;
+    height: 735px;
+    background-image: url(img/fone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  .search {
+    font-family: inherit;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 41px;
+    width: 288px;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    box-sizing: border-box;
+  }
+  
+  .search::placeholder {
+    font-family: Montserrat;
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  }
+  .menu-mob{
+    display: none;
+  }
+  .arrow {
+    display: block;
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+  }
+  
+  .title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    color: #FFF;
+    max-width: 792px;
+  }
+  
+  .slogan {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #FFF;
+  }
+  
+  .link-catalog {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .link-catalog:hover {
+    text-decoration: underline;
+  }
+  
+  .subtitle {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-bottom: 32px;
+    margin-top: 64px;
+  }
+  
+  .heading {
+    margin-bottom: 32px;
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .for-box {
+    padding-top: 64px;
+  }
+  
+  .for {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+  }
+  
+  .for_item {
+    box-sizing: border-box;
+    height: 415px;
+    grid-column: span 4;
+    color: #FFF;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s;
+  }
+  .for_item:hover{
+    box-shadow:0 0 15px black;
+    transform: scale(1.03);
+  }
+    
+    
+  .for_item_big {
+    grid-column: span 6;
+  }
+  
+  .for_item_rest {
+    background-image: url(img/for1.jpg);
+  }
+  
+  .for_item_work {
+    background-image: url(img/for2.jpg);
+  }
+  
+  .for_item_kitchen {
+    background-image: url(img/for3.jpg);
+  }
+  
+  .for_item_nursery {
+    background-image: url(img/for4.jpg);
+  }
+  
+  .for_item_bathroom {
+    background-image: url(img/for5.jpg);
+  }
+ 
+.product-content{
+ display: flex;
+ flex-wrap: wrap;
+  gap: 31px;
+  margin-bottom: 32px;
+}
+.shopping{
+  display: flex;
+  gap: 21px; 
+}
+.shopping_icon{
+  position: absolute;
+  top: 15px;
+  right: 60px;
+}
+.shopping_icon-heart{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.product{
+  position: relative;
+  width: 377px;
+  box-sizing: border-box;
+  padding: 5px;
+  transition: all .3s;
+  &:hover{
+    box-shadow:0 0 15px black;
+    transform: scale(1.02);
+  }
+}
+.product_image{
+  width:100%;
+  }
+.product_title {
+  margin-top: 10px;
+  margin-bottom: 9px;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product_text {
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.product_price {
+  color: #050505;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product_price-sale {
+  color: #888;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: line-through;
+}
+.product_price-with-sale {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+  .catalog_product_title {
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+  .link-catalog_dawn {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .link-catalog_dawn:hover {
+    text-decoration: underline;
+  }
+  
+
+// КАТАЛОГ
+.header_catalog{
+    position: relative;
+    height: 400px;
+    background-image: url(img/fone_catalog.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.search{
+  padding-left: 32px;
+  height: 41px;
+  width: 288px;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  box-sizing: border-box;
+
+}
+.search::placeholder{
+    font-family: Montserrat;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.arrow {
+    display: block;
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+    transition: transform 0.5s;
+}
+.arrow:hover{
+  transform:translate(0,-20px) scale(1.5);
+}
+.title {
+    margin-top: 127px;
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+    margin-top: 64px;
+}  
+.breadcrumbs{
+    list-style-type: none;
+    display: flex;
+}
+.breadcrumbs_link:hover{
+    text-decoration: underline;
+}
+.breadcrumbs__item:not(:last-child)::after {
+    content: '/';
+    padding-left: 8px;
+    padding-right: 8px;  
+}
+.breadcrumbs_link{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+.select {
+    position: relative;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.select{
+    padding: 11px 75px 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #C4C4C4;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;   
+}
+.select_arrow::before{
+    
+    content:"";
+    display: block;
+    position:absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+    background-image: url(img/select_catalog.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 11px;
+    transform: translate(-50%);
+    pointer-events: none;
+}
+.select_arrow{
+    position: relative;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:32px;
+    row-gap: 49px;
+}
+
+.show_more{
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}  
+.show_more:hover{
+    text-decoration: underline;
+}
+
+// ПОДВАЛ
+  .footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    display: flex;
+    background: #F7F6F6;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact_info {
+    display: flex;
+    gap: 152px;
+    flex-wrap: wrap;
+  }
+  
+  .logo_footer {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .menu_links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  
+  }
+  
+  .contact_email {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px; 
+  }
+  
+  
+  .contact {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+  
+  .contact-links{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+  }
+  
+  .contact-links:hover{
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  .links_footer_svg {
+    display: flex;
+    gap: 20px;
+  }
+  .footer_svg path{
+    transition: all 1s;
+  }
+  .footer_svg :hover path{
+    fill: black;
+  }
+  .footer_svg-twitter path{
+    fill: #888888;
+    transition: all 1s;
+  }
+  .footer_svg-twitter:hover path{
+    fill:black;
+  }
+  .input_text {
+    flex-direction: column;
+  }
+  
+  .form-text {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .email {
+    font-family: inherit;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: black;
+    fill: #FFF;
+    stroke-width: 1px;
+    stroke: #C4C4C4;
+    height: 46px;
+    width: 275px;
+    outline: none;
+  }
+  .email::placeholder {
+    color: #C4C4C4;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .button {
+    font-family: inherit;
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 275px;
+    height: 46px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    fill: rgba(222, 215, 215, 0.41);
+    stroke-width: 1px;
+    stroke: #FFF;
+    margin-top: 12px;
+    transition: all 1s;
+  }
+  .button:hover{
+       background-color: #000000;
+       color: #FFFFFF;
+  }
+  // КОНЕЦ ФУТЕРА
+@import 'cart';
+@import 'tablet';
+@import 'mobile'
+
